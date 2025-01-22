@@ -17,6 +17,7 @@ app.get('/get-admin',(req,res)=>{
     });
    });
 });
+
 app.get("/get-videos",(req,res)=>{
     mongoClient.connect(conString).then(conObj=>{
         let database=conObj.db("videodb");
@@ -25,8 +26,16 @@ app.get("/get-videos",(req,res)=>{
             res.end();
         })
     })
+}),
+app.get("/get-categories",(req,res)=>{
+    mongoClient.connect(conString).then(conObj=>{
+        let database=conObj.db("videodb");
+        database.collection("tblcategories").find({}).toArray().then(documents=>{
+            res.send(documents);
+            res.end();
+        })
+    })
 })
-
 
 
 app.listen(port,()=>{
