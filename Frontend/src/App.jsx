@@ -1,15 +1,16 @@
 
 import React from "react"
-import Button from "@mui/material/Button"
-import AdminLogin from "./pages/AdminLogin"
+
+
+import Home from "./pages/Home"
 
 function App() {
  
 
   return (
-    <>
-          <AdminLogin/>
-
+    <> 
+    <h1>app</h1>
+          <Home/>
     </>
   )
 }
