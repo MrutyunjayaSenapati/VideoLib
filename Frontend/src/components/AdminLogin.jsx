@@ -15,9 +15,9 @@ export default  function AdminLogin() {
         onSubmit: (admin)=> {
             axios.get('http://127.0.0.1:5050/get-admin')
             .then(response=>{
-                 var user = response.data.find(item=> item.UserId===admin.UserId);
+                 var user = response.data.find(item=> item.username===admin.UserId);
                  if(user){
-                     if(admin.Password===user.Password){
+                     if(admin.Password===user.password){
                         navigate("/admin-dash");
                      } else {
                         alert(`Invalid Password`);

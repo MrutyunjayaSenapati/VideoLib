@@ -7,6 +7,10 @@ import  UserLogin  from './components/UserLogin.jsx';
 import  UserRegister  from './components/UserRegister.jsx';
 import  UserDashBoard  from './components/UserDashBoard.jsx';
 import  AdminDashboard  from './components/AdminDashboard.jsx';
+import  AdminAddVideo  from './components/AdminAddVideo.jsx';
+import  AdminEditVideo  from './components/AdminEditVideo.jsx';
+import  AdminDeleteVideo  from './components/AdminDeleteVideo.jsx';
+import './App.css';
 
 
 
@@ -38,9 +42,10 @@ function App() {
                     <Route path='admin-dash' element={<AdminDashboard />} />
                       
                     <Route path='add-video' element={<AdminAddVideo />} />
-                     {/*
+                     
                     <Route path='edit-video/:id' element={<AdminEditVideo />} />
-                    <Route path='delete-video/:id' element={<AdminDeleteVideo />} />  */}
+                    
+                    <Route path='delete-video/:id' element={<AdminDeleteVideo />} />  
                 </Routes>
             
             </BrowserRouter>
